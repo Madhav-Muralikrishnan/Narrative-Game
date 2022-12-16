@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //not used
     public CharacterController2D controller;
 
     float moveH = 0f;
