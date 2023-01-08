@@ -5,16 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour
 {
-    public int sceneIndex;
-    
+    public int index = 0;
+
+    public GameObject player;
+    //public GameObject player1;
+
+    public static int healthTrack = 3;
+
+    public static bool levelTrack = false;
+
+
     private void OnTriggerEnter2D(Collider2D trigger)
     {
-        print("Trigger Activated");
+        //print("Trigger Activated");
 
         if(trigger.tag == "Player")
         {
-            print("Switching scene to " + sceneIndex);
-            SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
-        }
+            healthTrack = player.GetComponent<PlayerHealthSystem>().currentHealth;
+            levelTrack = player.GetComponent<PlayerController>().prevLevel;
+            //print(healthTrack);
+            //Destroy(player);
+            SceneManager.LoadScene(index, LoadSceneMode.Single);
+        }   
+
+        
     }
+    
 }
