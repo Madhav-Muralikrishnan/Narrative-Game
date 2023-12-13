@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
     public static bool bAttack = false;
     public static bool bStrike = false;
+
+    private bool block;
     
 
     // Start is called before the first frame update
@@ -55,13 +57,10 @@ public class PlayerController : MonoBehaviour
         if(ChangeLevel.levelTrack == true)
         {
             transform.position = new Vector3(9f,2f,-1f);
-            print("bool works");
-        }
-        else
-        {
-            print("bool no work");
+        
         }
 
+        transform.GetChild(1).gameObject.GetComponent<CastPointScript>().enabled = false;
         //attackPoint = transform.GetChild(2).gameObject;
 
     }
@@ -119,34 +118,49 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsAttacking", false);
             bAttack = false;
         }
-
-
-        if(Input.GetKey(KeyCode.Mouse1))
+        
+        if(Boss.def == true)
         {
-            animator.SetBool("IsDefending", true);
-            speed = 0;
-            isJumping = false;
+            if(Input.GetKey(KeyCode.Mouse1))
+            {
+                animator.SetBool("IsDefending", true);
+                speed = 0;
+                isJumping = false;
+                block = true;
+            }
+            else
+            {
+                animator.SetBool("IsDefending", false);
+                speed = 5;
+                isJumping = true;
+                block = false;
+            }
         }
         else
         {
-            animator.SetBool("IsDefending", false);
-            speed = 5;
-            isJumping = true;
+            block = false;
+        }
+        
+        if(Boss.cast == true)
+        {
+            transform.GetChild(1).gameObject.GetComponent<CastPointScript>().enabled = true;
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                animator.SetBool("IsCasting", true);
+            }
+            else
+            {
+                animator.SetBool("IsCasting", false);
+            }
         }
 
-        if(Input.GetKey(KeyCode.Q))
+        if(Boss.strk == true)
         {
-            animator.SetBool("IsCasting", true);
-        }
-        else
-        {
-            animator.SetBool("IsCasting", false);
-        }
-
-        if(Input.GetKey(KeyCode.E))
-        {
-            buttonPressTimer += Time.deltaTime;
-            print(buttonPressTimer);
+            if(Input.GetKey(KeyCode.E))
+            {
+                buttonPressTimer += Time.deltaTime;
+                print(buttonPressTimer);
+            }
         }
 
         if(buttonPressTimer >= 3)
@@ -191,6 +205,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = respawnPoint;
         }
+
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -224,11 +239,14 @@ public class PlayerController : MonoBehaviour
 
         if(collision.collider.gameObject.tag == "BossFireball")
         {
-            playerHealth.TakeDamage(1);
-            playerHealth.UpdateHealth();
-            print(collision.collider.gameObject.tag);
-            print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
-            Boss.isBossAttacking = true;
+            if(block == false)
+            {
+                playerHealth.TakeDamage(1);
+                playerHealth.UpdateHealth();
+                print(collision.collider.gameObject.tag);
+                print("BossFire");
+                Boss.isBossAttacking = true;
+            }
         }
     }
     
@@ -243,7 +261,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("We hit" + enem.name);
             //print(enem.transform.GetChild(0).GetComponent<EnemyBear>().EnemyDamaged(5));
-            enem.GetComponent<EnemyBear>().EnemyDamaged(1,enem);
+            enem.GetComponent<EnemyBear>().EnemyDamaged(5,enem);
             print("damaging");
         }
         
@@ -262,7 +280,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("We hit" + enem.name);
             //print(enem.transform.GetChild(0).GetComponent<EnemyBear>().EnemyDamaged(5));
-            enem.GetComponent<EnemyBear>().EnemyDamaged(50,enem);
+            enem.GetComponent<EnemyBear>().EnemyDamaged(20,enem);
             print("damaging");
         }
 

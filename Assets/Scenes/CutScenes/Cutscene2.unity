@@ -1305,7 +1305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8006fd0dc0e55f746b9ff0e0c4719845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 13
+  index: 15
   player: {fileID: 1888231221}
 --- !u!61 &178310127
 BoxCollider2D:
@@ -6445,7 +6445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1262908025
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6464,7 +6464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49, y: -307}
+  m_AnchoredPosition: {x: 49, y: -388}
   m_SizeDelta: {x: 268.71, y: 276.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262908026
@@ -7981,16 +7981,18 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1262908024}
   dialogueText: {fileID: 285358456}
   dialogue:
-  - Helikopter
-  - Helikopter 2
-  - Helikopter 3
+  - From here onwards, you're on your own
+  - What? Why?
+  - HE wont allow me in!
+  - Um okay. Dont worry ill get you back to normal
   wordSpeed: 0.01
   button: {fileID: 2081095547}
   prompt: {fileID: 1462389221}
   characterSprite:
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
-  - {fileID: 21300000, guid: 98abc6e7a7db4774f89ae113295256bd, type: 3}
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
   imageHolder: {fileID: 550439589}
   playerActivationDistance: 2
   flipEnabled: 1
@@ -8098,7 +8100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1462389222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8356,7 +8358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1493218107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8375,7 +8377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49, y: -307}
+  m_AnchoredPosition: {x: 49, y: -388}
   m_SizeDelta: {x: 268.71, y: 276.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1493218108
@@ -9171,16 +9173,16 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1493218106}
   dialogueText: {fileID: 979361228}
   dialogue:
-  - Inshallah
-  - Suii
-  - Ronaldo
+  - A scary cave
+  - I can do this!!!
+  - '*deep breath'
   wordSpeed: 0.01
   button: {fileID: 2010641319}
   prompt: {fileID: 1462389221}
   characterSprite:
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
-  - {fileID: 21300000, guid: 98abc6e7a7db4774f89ae113295256bd, type: 3}
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
   imageHolder: {fileID: 550439589}
   playerActivationDistance: 2
   flipEnabled: 1

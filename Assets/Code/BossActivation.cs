@@ -5,6 +5,8 @@ using UnityEngine;
 public class BossActivation : MonoBehaviour
 {
     private GameObject boss;
+
+    public static bool activate = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,9 @@ public class BossActivation : MonoBehaviour
     {
         if(collider.tag == "Player")
         {
+            print("Activating");
             boss.GetComponent<Boss>().enabled = true;
+            activate = true;
         }
     }
 }

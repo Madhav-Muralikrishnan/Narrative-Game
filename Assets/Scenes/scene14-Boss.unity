@@ -3609,7 +3609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &446440887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8815,7 +8815,7 @@ MonoBehaviour:
   realGround:
     serializedVersion: 2
     m_Bits: 8
-  speed: 1
+  speed: 2
   attackPoint: {fileID: 1065838402}
   attackRange: 1
   playerLayer:
@@ -8827,9 +8827,6 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  cast: 1
-  strk: 1
-  def: 1
 --- !u!58 &1034125938
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10228,7 +10225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880.0001, y: 345.00006}
+  m_AnchoredPosition: {x: -880.0001, y: 420}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1312443412
@@ -12698,7 +12695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49, y: -268}
+  m_AnchoredPosition: {x: 49, y: -395}
   m_SizeDelta: {x: 268.71, y: 276.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747780534

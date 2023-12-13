@@ -1204,6 +1204,7 @@ MonoBehaviour:
   interactionDelay: 1
   characterSprite: {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
   imageHolder: {fileID: 762021429}
+  panel: {fileID: 0}
 --- !u!114 &410050005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2876,16 +2877,26 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1501084714}
   dialogueText: {fileID: 1047029797}
   dialogue:
-  - Helikopter
-  - Helikopter 2
-  - Helikopter 3
+  - Hey its me!
+  - What?!! How is an animal speaking to me?
+  - It's me Jack!
+  - No. Jack is dead in front of me
+  - Look, I don't have much time. The thing that killed me is at the top of the mountain
+  - 'If you get to the top, you can save me and i can go back to normal '
+  - How is that even possible?
+  - Its an evil magical sprite. It's a long story
   wordSpeed: 0.01
   button: {fileID: 544402499}
   prompt: {fileID: 1233458728}
   characterSprite:
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
-  - {fileID: 21300000, guid: 98abc6e7a7db4774f89ae113295256bd, type: 3}
-  - {fileID: 21300000, guid: 60a5ceff1b9f91e44ba837c2f13ca147, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 2e1e7102212f897428c35c587e270b16, type: 3}
   imageHolder: {fileID: 1809553747}
   playerActivationDistance: 5
   flipEnabled: 1
@@ -3043,6 +3054,7 @@ MonoBehaviour:
   interactionDelay: 0
   characterSprite: {fileID: 21300000, guid: 8572dc203d0e16b49961b56d0b375bfa, type: 3}
   imageHolder: {fileID: 1194532994}
+  panel: {fileID: 0}
 --- !u!1 &762021428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,7 +3958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 40}
+  m_AnchoredPosition: {x: 60, y: 40}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233458730
@@ -4623,7 +4635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375829469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.21, y: -2.85, z: -0.1}
+  m_LocalPosition: {x: 0.69, y: -2.85, z: -0.1}
   m_LocalScale: {x: 4, y: 4, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4777,7 +4789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49, y: -307}
+  m_AnchoredPosition: {x: 49, y: -357}
   m_SizeDelta: {x: 268.71, y: 276.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501084716
@@ -5327,13 +5339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49236e07cc7cac34e912e8c270842c62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2088498215}
-  dialoguePanel: {fileID: 1747780532}
-  dialogueText: {fileID: 761631483}
-  dialogue:
-  - Bimall is ah
-  wordSpeed: 0.1
-  button: {fileID: 45775594}
+  player: {fileID: 0}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogue: []
+  wordSpeed: 0
+  button: {fileID: 0}
   prompt: {fileID: 0}
   characterSprite: []
   imageHolder: {fileID: 0}
@@ -6118,8 +6129,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929672572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.41, y: -1.27, z: -0.9}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 1.41, y: -1.4, z: -0.9}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6141,18 +6152,18 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1989057918}
   dialogueText: {fileID: 2063868235}
   dialogue:
-  - bissmal al ha
-  - This is testing
-  - 123
+  - Oh no! Youre Dead!!
+  - Why did they have to take you?
+  - You had a long life ahead of you *Sobs"
   wordSpeed: 0.01
   button: {fileID: 521323844}
   prompt: {fileID: 1233458728}
   characterSprite:
-  - {fileID: 21300000, guid: 8467f003c056e804c8d5e4c914abce1e, type: 3}
-  - {fileID: 21300000, guid: f903d1b2fe6a25041a892be301d187e4, type: 3}
-  - {fileID: 21300000, guid: 8467f003c056e804c8d5e4c914abce1e, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
+  - {fileID: 21300000, guid: 0364b24da93ad4e4ea3cd5c001b0d0b5, type: 3}
   imageHolder: {fileID: 2127017178}
-  playerActivationDistance: 2
+  playerActivationDistance: 3
   flipEnabled: 0
 --- !u!1 &1967385792
 GameObject:
@@ -6274,7 +6285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 49, y: -307}
+  m_AnchoredPosition: {x: 49, y: -357}
   m_SizeDelta: {x: 268.71, y: 276.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989057920

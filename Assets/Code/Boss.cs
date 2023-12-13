@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Boss : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
@@ -34,6 +34,15 @@ public class Boss : MonoBehaviour
     public static bool isBossAttacking = false;
 
     private float timer;
+
+    private float castTimer;
+    private float strikeTimer;
+    private float defTimer;
+    public static bool cast = false;
+    public static bool strk = false;
+    public static bool def = false;
+
+    private float timePassed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -122,14 +131,6 @@ public class Boss : MonoBehaviour
 
     }
 
-    private float castTimer;
-    private float strikeTimer;
-    private float defTimer;
-    public bool cast = true;
-    public bool strk = true;
-    public bool def = true;
-
-    private float timePassed = 0;
 
     IEnumerator CastAttack()
     {
@@ -238,17 +239,18 @@ public class Boss : MonoBehaviour
 
         if(bossHealth <= 0)
         {
-            print("dead");
+            SceneManager.LoadScene(17, LoadSceneMode.Single);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.gameObject.tag == "Fireball")
-        {
-            BossDamaged(5);
-            healthBar.AddToCurrentHealth(-5);
-            print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        {   if(BossActivation.activate == true)
+            {
+                BossDamaged(5);
+                healthBar.AddToCurrentHealth(-5);
+            }
         }
     }
 

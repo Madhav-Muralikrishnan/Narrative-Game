@@ -12,7 +12,7 @@ public class DialogueSystem : MonoBehaviour
     {
         for(int i = 0;i < input.Length; i++)
         {
-            print("length = " + input.Length);
+            //print("length = " + input.Length);
             textHolder.text += input[i];
             print(input);
             print(textHolder.text);

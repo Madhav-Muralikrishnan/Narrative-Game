@@ -37,11 +37,10 @@ public class TimelineController : MonoBehaviour
             playd0.playableGraph.GetRootPlayable(0).SetSpeed(0);
             //NPCScript.continueBool = true;
         }
-        print(NPCScript.continueBool);
-        if(NPCScript.continueBool == true)
+        //print(CutSceneDialogueScript.continueBool);
+        if(CutSceneDialogueScript.continueBool == true)
         {   
-            //playd0.Resume();
-            //print("resuming");
+            playd0.Resume();
             playd0.playableGraph.GetRootPlayable(0).SetSpeed(1);
            
         }

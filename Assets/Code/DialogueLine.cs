@@ -14,6 +14,10 @@ public class DialogueLine : DialogueSystem
     public Sprite characterSprite;
     public Image imageHolder;
 
+    private bool done = false;
+
+    public GameObject panel;
+ 
 
     private void Awake()
     {
@@ -24,8 +28,27 @@ public class DialogueLine : DialogueSystem
         imageHolder.preserveAspect = true;
     }
 
-    private void Start()
-    {
-        StartCoroutine(WriteText(input, textHolder, delay /*, interactionDelay*/));
+    private void Update()
+    { 
+            if(DialogueHolder.write == true)
+            {
+                //panel.SetActive(true);
+                if(done == false)
+                {
+                    StartCoroutine(WriteText(input, textHolder, delay /*, interactionDelay*/));
+                    print("Starting corountine");
+                    done = true;
+                }
+            }
+            else
+            {
+                //panel.SetActive(false);
+                textHolder.text = "";
+                //StopCoroutine(WriteText(input, textHolder, delay /*, interactionDelay*/));
+                done = false;
+            }
+            
     }
+
+
 }

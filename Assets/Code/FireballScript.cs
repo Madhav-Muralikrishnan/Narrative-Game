@@ -50,6 +50,12 @@ public class FireballScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if(collision.collider.gameObject.tag == "Temp")
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

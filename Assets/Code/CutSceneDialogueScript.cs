@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class NPCScript : MonoBehaviour
+public class CutSceneDialogueScript : MonoBehaviour
 {
     public GameObject player;
 
@@ -104,7 +104,7 @@ public class NPCScript : MonoBehaviour
     {
         foreach(char letter in dialogue[index].ToCharArray())
         {
-           dialogueText.text += letter ;
+           dialogueText.text += letter;
            yield return new WaitForSeconds(wordSpeed);
         }
         

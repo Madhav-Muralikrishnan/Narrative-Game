@@ -58,10 +58,11 @@ public class PlayerHealthSystem : MonoBehaviour
 
             if(killedByBoss == true)
             {
-                //SceneManager.LoadScene(16, LoadSceneMode.Single);
+                SceneManager.LoadScene(16, LoadSceneMode.Single);
             }
             else
             {
+                
                 playerController.transform.position = playerController.respawnPoint;
                 currentHealth = 3;
             }
